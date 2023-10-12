@@ -20,12 +20,19 @@ const Login = () => {
 
   return (
     <div className="relative w-full flex flex-wrap h-screen items-center">
-        <div className="w-1/2 bg-[#00C795] h-screen sm:hidden">
-            <p className="font-inter">Adroid</p>
-            <p className="font-inter">We evaluate and monitor the non-performing loan accounts and implement a recovery action plan to achieve timely and maximum recovery at a minimal cost and appropriate turn-around time through acceptable common practices aligned with legal framework and standards.</p>
+        <div className="w-1/2 bg-[#00C795] h-screen sm:hidden flex justify-center">
+          <div className="sm:w-[85%] w-[75%] h-full items-center flex flex-col">
+            <div className="h-[10%]"></div>
+            <div className="w-full h-auto flex flex-col justify-center items-center gap-[20px]">
+              <p className="font-inter self-start font-bold text-[60px] text-white">Adroid</p>
+              <p className="font-inter font-medium text-white text-[20px]">We evaluate and monitor the non-performing loan accounts and implement a recovery action plan to achieve timely and maximum recovery at a minimal cost and appropriate turn-around time through acceptable common practices aligned with legal framework and standards.</p>
+            </div>
+
+          </div>
+            
         </div>
-        <div className="w-1/2 h-screen bg-white flex flex-col justify-center items-center">
-          <div className="w-[70%] h-full items-center flex flex-col gap-8">
+        <div className="sm:w-full w-1/2 h-screen bg-white flex flex-col justify-center relative items-center">
+          <div className="sm:w-[80%] w-[70%] h-full items-center flex flex-col gap-8">
             <div className="h-[20%]"></div>
             <div className="w-full h-auto flex flex-col justify-center items-center">
               <img src={logo} alt="logo" className="w-[200px] h-[auto]"/>
