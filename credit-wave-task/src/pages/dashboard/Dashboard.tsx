@@ -70,18 +70,18 @@ const Home = () => {
 const Dashboard = () => {
     const [sidebarOpen, setSidebarOpen] = useState<boolean>(true)
 
-    const togglrSideBar = () => {
+    const toggleSideBar = () => {
         setSidebarOpen(!sidebarOpen)
     }
 
-    const sideWidth = sidebarOpen ? 'w-[20%] sm:w-[40vw] md:w-[30%]' : 'w-[5%] sm:w-[10vw] md:w-[10%]'
-    const sideWidth2 = sidebarOpen ? 'w-[80%] sm:w-[60vw] md:w-[70%]' : 'w-[100%] sm:w-[100vw] md:w-[100%]'
+    const sideWidth = sidebarOpen ? 'w-[25%] sm:!w-[45vw] md:w-[30%]' : 'w-[0%] sm:w-[0] md:w-[0%]'
+    const sideWidth2 = sidebarOpen ? 'w-[75%] sm:!w-[100vw] md:w-[70%]' : 'w-[100%] sm:w-[100vw] md:w-[100%]'
 
   return (
     <div className='w-screen flex box-border'>
-        <SideBar sidebarOpen={sidebarOpen} sideWidth={sideWidth}/>
+        <SideBar sidebarOpen={sidebarOpen} toggleSideBar={toggleSideBar} sideWidth={sideWidth}/>
         <div className={`${sideWidth2} min-h-screen`}>
-            <Header togglrSideBar={togglrSideBar} sidebarOpen={sidebarOpen}/>
+            <Header toggleSideBar={toggleSideBar} sidebarOpen={sidebarOpen}/>
             <Routes>
                 <Route path='' element={<Home />} />
             </Routes>
