@@ -22,7 +22,7 @@ const DropItem = ({ items, onClick }: DropItemP) => {
       {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         items?.map((item: any) => (
-          <li className='w-full' key={item && item.name} onClick={() => onClick(item.name)}>
+          <li className='w-full' key={item && item.name.toString()} onClick={() => onClick(item.name)}>
 
           </li>
         ))
@@ -32,7 +32,14 @@ const DropItem = ({ items, onClick }: DropItemP) => {
 
 }
 
-const SideBar = () => {
+type SideBarProps = {
+  sidebarOpen: boolean;
+  sideWidth: string;
+}
+const SideBar:React.FC<SideBarProps> = ({
+  sidebarOpen,
+  sideWidth
+}) => {
   const [selected, setSelected] = useState<string>('')
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
@@ -48,16 +55,16 @@ const SideBar = () => {
     }
   };
   return (
-    <div className='relative w-[20%] sm:hidden bg-white flex flex-col items-center min-h-[1024px]' style={{ boxShadow: '5px 0px 5px rgba(0, 0, 0, 0.1)' }}>
+    <div className={`relative ${sideWidth} bg-white flex flex-col items-center min-h-screen overflow-y-auto overflow-x-hidden`} style={{ boxShadow: '5px 0px 5px rgba(0, 0, 0, 0.1)', display: !sidebarOpen ? 'none' : ''  }}>
       <div className="h-[60px] flex w-[85%] pl-[10x] items-center justify-start"><img src={logo} alt='logo' className='ml-[10px] w-[88px] h-[31px]' /></div>
-      <ul className='w-[85%] flex flex-col mt-[15px] gap-[20px]'>
+      <ul className='w-[85%] justify-center items-center flex flex-col mt-[15px] gap-[20px]'>
         {
-          dashboardItems.map((itm, index) => (
+          dashboardItems.map((itm) => (
             <>
-            <li className='w-full flex items-center justify-center gap-5' key={index}>
-              <img className='w-[24px] h-[24px]' src={itm.icon} alt={`dashboard item ${index}`} />
+            <li className='w-full flex items-center justify-center gap-5' key={itm.name.toString()}>
+              <img className='w-[24px] h-[24px]' src={itm.icon} alt={itm.name} />
               <Link to={selected} className='w-full flex'>
-              <p className='text-[13px] text-center'>
+              <p className='text-[0.7em] text-center'>
                   {itm.name}
               </p>
               </Link>
