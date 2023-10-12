@@ -38,8 +38,8 @@ const CustomInput: React.FC<CustomInputProps> = ({
         </label>
         {
             counter ? (
-                <div className='relative w-full h-[50px] flex flex-col'>
-                    <input type={type} placeholder={placeholder} onChange={onChange} value={value} className={`w-full border-[1px] rounded-[4px] leading-6 h-full border-[#BFCCC9] px-[12px] py-[10px] self-center text-[${textColor}]`}/>
+                <div className='relative w-full h-auto flex flex-col'>
+                    <input type={type} placeholder={placeholder} onChange={onChange} value={value} className={`w-full border-[1px] rounded-[4px] leading-[24px] h-[50px] border-[#BFCCC9] px-[12px] py-[10px] self-center text-[${textColor}]`}/>
                     {resendDisabled && (
                     <span className="!text-[#00C796] text-base absolute top-[12px] font-normal right-[12px] cursor-pointer">
                         {formatCountdown && formatCountdown(counter)}

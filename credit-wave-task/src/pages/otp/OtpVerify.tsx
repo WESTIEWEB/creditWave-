@@ -40,7 +40,7 @@ const OtpVerify = () => {
     }
   return (
     <div className='w-full h-screen flex flex-col justify-center items-center bg-white'>
-        <div className='w-[50%] sm:w-[80%] flex flex-col items-center justify-center gap-10'>
+        <div className='w-[50%] sm:w-[80%] flex flex-col items-center justify-center gap-[50px]'>
             <div className='bg-[#C1FFF0] w-[88px] rounded-2xl h-[87px] flex justify-center items-center'>
                 <img src={lock} className='w-[40px] h-[50px]' />
             </div>
@@ -54,11 +54,11 @@ const OtpVerify = () => {
 
             <CustomInput onClick={requestOtp} placeholder='Verification Code' resendDisabled={resendDisabled} formatCountdown={formatCountdown} type='text' value={otp} counter={countdown} onChange={handleOtpChange} />
 
-            <CustomButton text='Verify' textColor='white' className='rounded-[4px] p-[22px] w-full flex flex-col items-center justify-center h-[24px] text-[white] bg-[#00C795]' link='app/dashboard' style='text-[18px] font-semibold' />
+            <CustomButton text='Verify' textColor='white' className='rounded-[4px] p-[22px] w-full flex flex-col items-center justify-center h-[50px] text-[white] bg-[#00C795]' link='/dashboard' style='text-[18px] font-semibold' />
         </div>
             {
                 !resendDisabled && (
-                    <p className='text-gray-700 text-[14px] w-[50%] flex self-center cursor-pointer -translate-y-[82px]' onClick={requestOtp}>Resend Code</p>
+                    <p className='text-gray-700 text-[14px] w-[50%] flex self-center cursor-pointer -translate-y-[90px]' onClick={requestOtp}>Resend Code</p>
                 )
             }
       
