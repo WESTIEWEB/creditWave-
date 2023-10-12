@@ -48,7 +48,7 @@ const SideBar = () => {
     }
   };
   return (
-    <div className='relative w-[25%] bg-white flex flex-col items-center min-h-[1024px]' style={{ boxShadow: '5px 0px 5px rgba(0, 0, 0, 0.1)' }}>
+    <div className='relative w-[20%] bg-white flex flex-col items-center min-h-[1024px]' style={{ boxShadow: '5px 0px 5px rgba(0, 0, 0, 0.1)' }}>
       <div className="h-[60px] flex w-[85%] pl-[10x] items-center justify-start"><img src={logo} alt='logo' className='ml-[10px] w-[88px] h-[31px]' /></div>
       <ul className='w-[85%] flex flex-col mt-[15px] gap-[20px]'>
         {

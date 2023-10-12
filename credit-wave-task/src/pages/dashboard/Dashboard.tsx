@@ -8,10 +8,18 @@ const Home = () => {
     return (
             <div className='w-full h-screen bg-white justify-center flex'>
                 <div className='w-[90%] flex my-8 gap-[10px]'>
-                <div className='w-[60%] h-[263px] bg-[#00C795]'>
-                    <img src={laptop} alt='desktop'/>
+                <div className='w-[70%] h-[263px] bg-[#00C795] flex justify-between p-[25px]'>
+                    <div className='w-full '>
+                        <p className='font-bold text-[18px] text-white'>
+                        Welcome back Kenny!
+                        </p>
+                        <p className='font-medium text-white text-[0.5em]'>
+                        Your last login was 12:00pm 09 Jul, 2023
+                        </p>
+                    </div>
+                    <img src={laptop} alt='desktop' className='h-[143px] w-[223px]'/>
                 </div>
-                <div className='w-[40%] bg-white flex flex-col justify-center items-center h-[263px] 'style={{ boxShadow: '2px 2px 2px 2px 2px rgba(0, 0, 0, 0.1)' }}>
+                <div className='w-[30%] bg-white flex flex-col justify-center items-center h-[263px] 'style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
                     <img src={profile} alt='profile image'/>
                 </div>
                 </div>
@@ -49,7 +57,7 @@ const Dashboard = () => {
 
             </div> */}
             <SideBar />
-        <div className='w-[75%] min-h-screen'>
+        <div className='w-[80%] min-h-screen'>
             <Header />
             <Routes>
                 <Route path='' element={<Home />} />
