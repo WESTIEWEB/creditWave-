@@ -14,6 +14,7 @@ import brideg from '../assets/icons/bridge-loan.png';
 import report from '../assets/icons/report.png';
 import loanUnderwriting from '../assets/icons/loan-underwriting.png';
 import laptop from '../assets/images/pana.png';
+import internship from '../assets/images/bro.png';
 
 export { logo, 
     lock, 
@@ -30,5 +31,6 @@ export { logo,
     mobApp, 
     loanApplication, 
     brideg, 
-    report 
+    report,
+    internship
 };
