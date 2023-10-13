@@ -15,6 +15,7 @@ import report from '../assets/icons/report.png';
 import loanUnderwriting from '../assets/icons/loan-underwriting.png';
 import laptop from '../assets/images/pana.png';
 import internship from '../assets/images/bro.png';
+import singleSignOn from '../assets/icons/single-on.png'
 
 export { logo, 
     lock, 
@@ -32,5 +33,6 @@ export { logo,
     loanApplication, 
     brideg, 
     report,
-    internship
+    internship,
+    singleSignOn
 };
