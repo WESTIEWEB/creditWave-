@@ -19,42 +19,92 @@ const dashboardItems = [
     },
     {
         name: 'Loan Application',
-        link: '/loan-application',
         icon: loanApplication,
         dropItem : [
-
+            {
+                name: 'Loan Application',
+                link: '/loan-application'
+            },
+            {
+                name: 'Loan Application',
+                link: '/loan-application'
+            },
+            {
+                name: 'Loan Application',
+                link: '/loan-application'
+            }
         ]
     },
     {
         name: 'Loan Underwriting',
-        link: '/loan-underwriting',
         icon: loanUnderwriting,
         dropItem: [
-
+            {
+                name: 'Loan Underwriting',
+                link: '/loan-underwriting'
+            },
+            {
+                name: 'Loan Underwriting',
+                link: '/loan-underwriting'
+            },
+            {
+                name: 'Loan Underwriting',
+                link: '/loan-underwriting'
+            }
         ]
     },
     {
         name: 'Collection',
-        link: '/collection',
         icon: collection,
         dropItem: [
-
+            {
+                name: 'Collection',
+                link: '/collection'
+            },
+            {
+                name: 'Collection',
+                link: '/collection'
+            },
+            {
+                name: 'Collection',
+                link: '/collection'
+            }
         ]
     },
     {
         name: 'CRM',
-        link: '/crm',
         icon: crm,
         dropItem: [
-
+            {
+                name: 'CRM',
+                link: '/crm'
+            },
+            {
+                name: 'CRM',
+                link: '/crm'
+            },
+            {
+                name: 'CRM',
+                link: '/crm'
+            }
         ]
     },
     {
         name: 'Administration',
-        link: '/administration',
         icon: admin,
         dropItem: [
-
+            {
+                name: 'Administration',
+                link: '/administration'
+            },
+            {
+                name: 'Administration',
+                link: '/administration'
+            },
+            {
+                name: 'Administration',
+                link: '/administration'
+            }
         ]
     },
     {

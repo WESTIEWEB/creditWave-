@@ -2,6 +2,12 @@ export interface DashItemsT {
     name?: string;
     icon?: string;
     link?: string;
-    dropItem? : unknown[]
+    dropItem? : DropItemsT[];
+}
+
+export type DropItemsT = {
+    name: string;
+    link: string;
+    icon?: string;
 }
 

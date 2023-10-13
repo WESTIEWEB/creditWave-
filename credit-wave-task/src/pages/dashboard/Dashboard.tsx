@@ -10,7 +10,7 @@ import Calender from './components/Calender'
 // npm install dayjs
 const Home = () => {
     return (
-            <div className='w-full box-border h-screen bg-white items-center overflow-auto flex flex-col'>
+            <div className='w-full box-border min-h-screen bg-white items-center overflow-auto flex flex-col'>
                 <div className='w-[90%] flex my-[50px] flex-col gap-[50px]'>
                     <div className="w-full sm:auto sm:flex-col flex gap-[20px] items-center">
                         <div className='w-[70%] h-[263px] sm:w-[80%] sm:flex-col bg-[#00C795] rounded-[10px] flex justify-between p-[25px]'>
@@ -37,7 +37,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className="w-full h-auto flex gap-[20px] sm:flex-col items-center mb-10">
+                    <div className="w-full h-auto flex gap-[20px] sm:flex-col items-center mb-5">
                         <div className='w-[70%] h-[532px] rounded-[10px] bg-white sm:w-[80%]  flex justify-between p-[25px]' style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
                             <div>
 
@@ -74,13 +74,13 @@ const Dashboard = () => {
         setSidebarOpen(!sidebarOpen)
     }
 
-    const sideWidth = sidebarOpen ? 'w-[25%] sm:!w-[45vw] md:w-[30%]' : 'w-[0%] sm:w-[0] md:w-[0%]'
-    const sideWidth2 = sidebarOpen ? 'w-[75%] sm:!w-[100vw] md:w-[70%]' : 'w-[100%] sm:w-[100vw] md:w-[100%]'
+    const sideWidth = sidebarOpen ? 'w-[20%] sm:!w-[45vw] md:w-[30%]' : 'w-[0%] sm:w-[0] md:w-[0%]'
+    const sideWidth2 = sidebarOpen ? 'w-[80%] sm:!w-[100vw] md:w-[70%]' : 'w-[100%] sm:w-[100vw] md:w-[100%]'
 
   return (
     <div className='w-screen flex box-border'>
         <SideBar sidebarOpen={sidebarOpen} toggleSideBar={toggleSideBar} sideWidth={sideWidth}/>
-        <div className={`${sideWidth2} min-h-screen`}>
+        <div className={`${sideWidth2} min-h-[1020px]`}>
             <Header toggleSideBar={toggleSideBar} sidebarOpen={sidebarOpen}/>
             <Routes>
                 <Route path='' element={<Home />} />
